@@ -31,7 +31,7 @@ with st.sidebar:
 col1, col2 = st.columns([2, 1])
 
 with col1:
-    st.subheader("SampleDashBoard on sales")  # Changed from title to subheader
+    st.subheader("Sample Dashboard on Sales")
     filtered_df = df[df['Category'].isin(category_filter)]
     fig = px.bar(filtered_df, x='Month', y='Sales', color='Category', barmode='group')
     st.plotly_chart(fig, use_container_width=True)
